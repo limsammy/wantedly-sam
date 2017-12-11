@@ -2,7 +2,7 @@ class DashboardController < ApplicationController
 
   def index
     @user = current_user
-    @skill = Skill.new
+    @skill = current_user.skills.new
   end
 
 end
