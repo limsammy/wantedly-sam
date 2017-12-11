@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
 
+  put '/increment/:id', to: 'user_skills#increment'
+
   resources :users, only: [:new, :create, :show]
 end

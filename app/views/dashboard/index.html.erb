@@ -1,0 +1,12 @@
+<% if current_user %>
+  <h1>Welcome, <%= current_user.username %>!</h1>
+  <hr>
+  <h3>Your Skills</h3>
+    <ul>
+  <% current_user.user_skills.each do |skill| %>
+      <li><%= skill.skill.name %> Endorsements: (<%= skill.endorsements %>) <%= link_to "+1", "/increment/#{skill.id}", method: :put %></li>
+  <% end %>
+    </ul>
+<% else %>
+  <i>Please login...</i>
+<% end %>
