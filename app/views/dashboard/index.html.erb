@@ -8,14 +8,12 @@
   <% end %>
     </ul>
 
-  <%= form_for(@user) do |f| %>
-    <%= f.label :username %>
-    <%= f.text_field :username %>
+<h5>Add Skill</h5>
+  <%= form_for [@user, @skill] do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
 
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-
-    <%= f.submit "Submit" %>
+    <%= f.submit "Add Skill" %>
   <% end %>
 
 <% else %>
