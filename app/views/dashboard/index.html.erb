@@ -7,6 +7,17 @@
       <li><%= skill.skill.name %> Endorsements: (<%= skill.endorsements %>) <%= link_to "+1", "/increment/#{skill.id}", method: :put %></li>
   <% end %>
     </ul>
+
+  <%= form_for(@user) do |f| %>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+
+    <%= f.submit "Submit" %>
+  <% end %>
+
 <% else %>
   <i>Please login...</i>
 <% end %>

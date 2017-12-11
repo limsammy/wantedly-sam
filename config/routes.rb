@@ -8,5 +8,7 @@ Rails.application.routes.draw do
 
   put '/increment/:id', to: 'user_skills#increment'
 
-  resources :users, only: [:new, :create, :show]
+  resources :users, only: [:new, :create, :show] do
+    resources :skills
+  end
 end
