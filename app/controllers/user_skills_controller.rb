@@ -1,7 +1,7 @@
 class UserSkillsController < ApplicationController
 
   def increment
-    skill = UserSkill.find(params[:id])
+    skill = Skill.find(params[:id])
     if skill.endorsements.nil?
       skill.endorsements = 0
     end

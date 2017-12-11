@@ -3,8 +3,8 @@
   <hr>
   <h3>Your Skills</h3>
     <ul>
-  <% current_user.user_skills.each do |skill| %>
-      <li><%= skill.skill.name %> Endorsements: (<%= skill.endorsements %>) <%= link_to "+1", "/increment/#{skill.id}", method: :put %></li>
+  <% current_user.skills.each do |skill| %>
+      <li><%= skill.name %> Endorsements: (<%= skill.endorsements %>) <%= link_to "+1", "/increment/#{skill.id}", method: :put %></li>
   <% end %>
     </ul>
 
